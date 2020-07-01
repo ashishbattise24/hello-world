@@ -9,5 +9,8 @@ job('First Maven Project'){
     steps {
        maven('clean package', 'pom.xml')
     }
-
+    publishers {
+        //archive the war file generated
+        archiveArtifacts '**/*.jar'
+    }
 }
