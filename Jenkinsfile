@@ -4,12 +4,13 @@ pipeline {
             stage('Init') {
                   steps {
                         echo 'Hi, this is Anshul from LevelUp360'
-                        echo 'We are Starting the Testing'
+                        sh 'touch init'
                   }
             }
             stage('Build') {
                   steps {
                         echo 'Building Sample Maven Project'
+                        sh 'touch Build'
                   }
             }
             stage('Deploy') {
